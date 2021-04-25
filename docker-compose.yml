@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  backend:
+    container_name: $CONTAINER_NAME
+    image: $IMAGE_DEV
+    working_dir: /app
+    command: "yarn start:dev"
+    volumes:
+      - ./app:/app
+    ports:
+      - "80:80"
